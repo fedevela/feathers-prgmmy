@@ -7,11 +7,11 @@ module.exports = (options = {}) => {
     const { data } = context;
 
     // Throw an error if we didn't get a text
-    if (!data.x) {
-      throw new Error("An X coordinate must be set.");
+    if (!data.xValue) {
+      throw new Error("An xValue coordinate must be set. "+Object.keys(data));
     }
-    if (!data.x) {
-      throw new Error("A Y coordinate must be set.");
+    if (!data.yValue) {
+      throw new Error("A yValue coordinate must be set. "+Object.keys(data));
     }
     context.data.createdAt = new Date().getTime();
 
